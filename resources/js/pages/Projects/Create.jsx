@@ -8,8 +8,6 @@ export default function Create() {
         category: '',
         description: '',
         tech_stack: '',
-        project_url: '',
-        repository_url: '',
         date_completed: '',
         image: null,
     });

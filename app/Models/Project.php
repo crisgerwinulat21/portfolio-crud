@@ -11,8 +11,6 @@ class Project extends Model
         'category',
         'description',
         'tech_stack',
-        'project_url',
-        'repository_url',
         'image',
         'date_completed',
     ];

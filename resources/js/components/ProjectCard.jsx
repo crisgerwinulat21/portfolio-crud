@@ -27,20 +27,6 @@ export default function ProjectCard({ project }) {
                         <li key={tool} className="rounded bg-wash px-2 py-0.5">{tool}</li>
                     ))}
                 </ul>
-                {(project.project_url || project.repository_url) && (
-                    <div className="mt-auto flex gap-4 pt-5">
-                        {project.project_url && (
-                            <a href={project.project_url} target="_blank" rel="noopener noreferrer" className={linkClass}>
-                                View project<span className="sr-only"> (opens in a new tab)</span>
-                            </a>
-                        )}
-                        {project.repository_url && (
-                            <a href={project.repository_url} target="_blank" rel="noopener noreferrer" className={linkClass}>
-                                Repository<span className="sr-only"> (opens in a new tab)</span>
-                            </a>
-                        )}
-                    </div>
-                )}
             </div>
         </article>
     );

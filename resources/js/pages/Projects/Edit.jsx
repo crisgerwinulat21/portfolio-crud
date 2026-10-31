@@ -9,8 +9,6 @@ export default function Edit({ project }) {
         category: project.category,
         description: project.description,
         tech_stack: project.tech_stack,
-        project_url: project.project_url ?? '',
-        repository_url: project.repository_url ?? '',
         date_completed: project.date_completed,
         image: null,
     });
