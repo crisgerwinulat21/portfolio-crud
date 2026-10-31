@@ -14,8 +14,6 @@ return new class extends Migration
             $table->string('category', 20);
             $table->text('description');
             $table->string('tech_stack');
-            $table->string('project_url')->nullable();
-            $table->string('repository_url')->nullable();
             $table->string('image');
             $table->date('date_completed');
             $table->timestamps();

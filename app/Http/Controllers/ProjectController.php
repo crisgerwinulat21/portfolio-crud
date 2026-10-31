@@ -74,8 +74,6 @@ class ProjectController extends Controller
             'category' => ['required', Rule::in(['mobile', 'web', 'design'])],
             'description' => ['required', 'string', 'min:20', 'max:500'],
             'tech_stack' => ['required', 'string', 'max:255'],
-            'project_url' => ['nullable', 'url', 'max:255'],
-            'repository_url' => ['nullable', 'url', 'max:255'],
             'date_completed' => ['required', 'date', 'before_or_equal:today'],
             // an image is required when creating, optional when editing
             'image' => [$project ? 'nullable' : 'required', 'image', 'mimes:jpg,jpeg,png,webp', 'max:2048'],
@@ -88,11 +86,10 @@ class ProjectController extends Controller
             'title.required' => 'Please enter the project title.',
             'title.unique' => 'You already have a project with this title.',
             'description.min' => 'The description must be at least 20 characters so visitors understand the project.',
-            'project_url.url' => 'Enter a full link that starts with http:// or https://.',
-            'repository_url.url' => 'Enter a full link that starts with http:// or https://.',
             'date_completed.before_or_equal' => 'The completion date cannot be in the future.',
             'image.required' => 'Please upload a screenshot of the project.',
             'image.max' => 'The image must not be larger than 2 MB.',
+            'image.uploaded' => 'The image failed to upload. Make sure it is smaller than 2 MB.',
         ];
     }
 }

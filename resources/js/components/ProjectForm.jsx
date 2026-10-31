@@ -38,14 +38,6 @@ export default function ProjectForm({ form, onSubmit, submitLabel, currentImage 
                 <input type="text" {...field('tech_stack')} />
             </FormField>
 
-            <FormField label="Project URL (optional)" name="project_url" error={errors.project_url}>
-                <input type="url" {...field('project_url')} />
-            </FormField>
-
-            <FormField label="Repository URL (optional)" name="repository_url" error={errors.repository_url}>
-                <input type="url" {...field('repository_url')} />
-            </FormField>
-
             <FormField label="Date completed" name="date_completed" error={errors.date_completed}>
                 <input type="date" {...field('date_completed')} />
             </FormField>
