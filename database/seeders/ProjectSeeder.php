@@ -4,12 +4,16 @@ namespace Database\Seeders;
 
 use App\Models\Project;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Storage;
 
 class ProjectSeeder extends Seeder
 {
     public function run(): void
     {
-        // EDIT: put your real completion dates
+                // Copy the sample images into public storage so a fresh clone shows them
+        foreach (['mob.png', 'lpg.png', 'uncheyined.png'] as $file) {
+            Storage::disk('public')->put("projects/{$file}", file_get_contents(database_path("seeders/images/{$file}")));
+        }
         $projects = [
             [
                 'title' => 'BINLY: AI Waste Segregation',
